@@ -122,7 +122,7 @@ if [ -z "$DD_HOSTNAME" ]; then
     D="$(echo "$DYNO" | sed -e 's/[^a-zA-Z0-9.-]/-/g' -e 's/^-//g')"
     echo "test"
     echo "$D"
-    export DD_HOSTNAME="$HAN.$D"
+    export DD_HOSTNAME="$HAN"
   else
     # Set the hostname to the dyno host
     DD_HOSTNAME="$(echo "$DYNOHOST" | sed -e 's/[^a-zA-Z0-9-]/-/g' -e 's/^-//g')"
