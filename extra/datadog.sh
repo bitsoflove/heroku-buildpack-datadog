@@ -120,8 +120,6 @@ if [ -z "$DD_HOSTNAME" ]; then
     fi
 
     D="$(echo "$DYNO" | sed -e 's/[^a-zA-Z0-9.-]/-/g' -e 's/^-//g')"
-    echo "test"
-    echo "$D"
     export DD_HOSTNAME="$HAN"
   else
     # Set the hostname to the dyno host
